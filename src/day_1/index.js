@@ -1,8 +1,16 @@
 function reverseString(str){
-    let newStr = ""
-    for(let i = str.length - 1; i >= 0 ; i--)
-        newStr += str[i]
-    return newStr
+    let strArr = str.split('')
+    let start = 0
+    let end = strArr.length - 1
+
+    while (start < end){
+        const temp = strArr[start]
+        strArr[start] = strArr[end]
+        strArr[end] = temp
+        start++;
+        end--;
+    }
+    return strArr.join('')
 }
 /*
 hello

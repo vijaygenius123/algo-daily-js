@@ -2,7 +2,7 @@ const assert = require("assert")
 const reverseString = require("./index")
 
 
-describe("", () => {
+describe("String Reverse", () => {
 
     it('should reverse an empty string', () => {
         assert.equal(reverseString(''), '');
