@@ -1,46 +1,32 @@
-const assert = require('assert')
-const reverseString = require('./index')
+const assert = require("assert")
+const reverseString = require("./index")
 
 
-try {
-    assert.equal(
-        reverseString('njnschnjkdasn j32 uida'),
-        'adiu 23j nsadkjnhcsnjn'
-    );
+describe("", () => {
 
-    console.log(
-        'PASSED: ' +
-        "`reverseString('njnschnjkdasn j32 uida')` should return `'adiu 23j nsadkjnhcsnjn'`"
-    );
-} catch (err) {
-    console.log(err);
-}
+    it('should reverse an empty string', () => {
+        assert.equal(reverseString(''), '');
+    })
 
-try {
-    assert.equal(reverseString('timbuktu12'), '21utkubmit');
+    it('should reverse a simple string 1', () => {
+        assert.equal(
+            reverseString('njnschnjkdasn j32 uida'),
+            'adiu 23j nsadkjnhcsnjn'
+        );
+    })
 
-    console.log(
-        'PASSED: ' + "`reverseString('timbuktu12')` should return `'21utkubmit'`"
-    );
-} catch (err) {
-    console.log(err);
-}
+    it('should reverse a simple string 2', () => {
+        assert.equal(reverseString('timbuktu12'), '21utkubmit');
+    })
 
-try {
-    assert.equal(reverseString(''), '');
 
-    console.log('PASSED: ' + "`reverseString('')` should return `''`");
-} catch (err) {
-    console.log(err);
-}
+    it('should reverse a simple string 3', function () {
+        assert.equal(reverseString('reverseastring'), 'gnirtsaesrever');
+    });
 
-try {
-    assert.equal(reverseString('reverseastring'), 'gnirtsaesrever');
 
-    console.log(
-        'PASSED: ' +
-        "`reverseString('reverseastring')` should return `'gnirtsaesrever'`"
-    );
-} catch (err) {
-    console.log(err);
-}
+})
+
+
+
+
