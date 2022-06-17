@@ -1,29 +1,39 @@
 const assert = require("assert")
-const reverseString = require("./index")
+const intersection = require("./index")
 
 
-describe("String Reverse", () => {
+function assertSameMembers(a, b) {
+    return JSON.stringify(a.sort()) === JSON.stringify(b.sort());
+}
 
-    it('should reverse an empty string', () => {
-        assert.equal(reverseString(''), '');
+describe("Array Intersection", () => {
+
+    it('should return intersection', () => {
+        assert.deepEqual(intersection([6, 0, 12, 10, 16], [3, 15, 18, 20, 15]), []);
     })
 
-    it('should reverse a simple string 1', () => {
-        assert.equal(
-            reverseString('njnschnjkdasn j32 uida'),
-            'adiu 23j nsadkjnhcsnjn'
+    it('should return intersection', () => {
+        assert.deepEqual(intersection([1, 5, 2, 12, 6], [13, 10, 9, 5, 8]), [5]);
+    })
+
+    it('should return intersection', () => {
+        assertSameMembers(
+            intersection(
+                [4, 17, 4, 4, 15, 16, 17, 6, 7],
+                [15, 2, 6, 20, 17, 17, 8, 4, 5]
+            ),
+            [15, 6, 17, 4]
         );
     })
 
-    it('should reverse a simple string 2', () => {
-        assert.equal(reverseString('timbuktu12'), '21utkubmit');
-    })
 
-
-    it('should reverse a simple string 3', function () {
-        assert.equal(reverseString('reverseastring'), 'gnirtsaesrever');
+    it('should return intersection', () => {
+        assert.deepEqual(intersection([3], [15]), []);
     });
 
+    it('should return intersection', () => {
+        assert.deepEqual(intersection([2, 16, 8, 9], [14, 15, 2, 20]), [2]);
+    })
 
 })
 

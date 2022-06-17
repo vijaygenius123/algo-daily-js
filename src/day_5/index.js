@@ -1,5 +1,22 @@
-function isAnagram(str1, str2){
-    return str1.toLowerCase().split('').sort().join('') === str2.toLowerCase().split('').sort().join('');
+
+function isAlphaNumeric(c){
+    return new RegExp(/[a-z0-9]/i).test(c)
 }
 
-module.exports = isAnagram
+function isPalindrome(str) {
+    let strArr = str.split(''),
+        start = 0,
+        end = strArr.length - 1;
+    while (start < end) {
+        if(!isAlphaNumeric(strArr[start])) start++;
+        if(!isAlphaNumeric(strArr[end])) end--;
+        if (strArr[start].toLowerCase() !== strArr[end].toLowerCase()) {
+            return false;
+        }
+        start++;
+        end--;
+    }
+    return true;
+}
+
+module.exports = isPalindrome

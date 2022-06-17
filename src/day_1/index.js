@@ -1,21 +1,15 @@
-function reverseString(str){
-    let strArr = str.split('')
-    let start = 0
-    let end = strArr.length - 1
-
-    while (start < end){
-        const temp = strArr[start]
-        strArr[start] = strArr[end]
-        strArr[end] = temp
-        start++;
-        end--;
+function intersection(nums1, nums2){
+    let result = []
+    const nums = nums1.reduce((prev, curr) => {
+        return {
+            ...prev,
+            [curr] : true
+        }
+    }, {})
+    for(let i =0; i< nums2.length; i++){
+        if(nums2[i] in nums) result.push(nums2[i])
     }
-    return strArr.join('')
+    return result
 }
-/*
-hello
-01234
-42310
-olleh
-*/
-module.exports = reverseString
+
+module.exports = intersection

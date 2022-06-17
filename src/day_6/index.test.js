@@ -1,22 +1,17 @@
 const assert = require('assert')
-const isPalindrome = require('./index')
+const majorityElement = require('./index')
 
-describe("Check If String Is Palindrome", () => {
+describe("Majority Element", function () {
 
-    it('should return true if string is a palindrome 1', function () {
-        assert.equal(isPalindrome('racecar'), true)
+    it('should return the majority correctly 1', function () {
+        assert.equal(majorityElement([1, 4, 2, 4, 4, 3, 4]), 4);
     });
 
-    it('should return true if string is a palindrome 2', function () {
-        assert.equal(isPalindrome('A Santa Lived As a Devil At NASA'), true);
+    it('should return the majority correctly 2', function () {
+        assert.equal(majorityElement([1, 1, 1, 4, 2, 4, 4, 3, 1, 1, 1]), 1);
     });
 
-    it('should return true if string is a palindrome 3', function () {
-        assert.equal(isPalindrome('a'), true);
-    });
-
-
-    it('should return false if string is not a palindrome', function () {
-        assert.equal(isPalindrome('gold'), false);
+    it('should return the majority correctly 1', function () {
+        assert.equal(majorityElement([5, 4, 4, 4, 3, 3, 3, 3, 3]), 3);
     });
 })

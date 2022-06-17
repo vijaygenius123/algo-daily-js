@@ -1,34 +1,27 @@
-# Array Intersection (Easy)
+# Fizz Buzz (Easy)
 Good afternoon, vijaygenius123! Here's our prompt for today.
 
-As we ease our way into the course, we'll want to start with the basic data structures and their operations. However, don't be fooled how fundamental these things are!
+Fizz Buzz is a classic interview question that apparently many experienced engineering candidates often can't solve! Let's cover it today.
 
-Interviewers will often test you on things that are deceptively easy. We saw this in Reverse a String, and will see more in future challenges. But sometimes you might get tested on a concept that, while a bit trivial, is really useful in day to day software engineering.
+We're given a number in the form of an integer n.
 
-One of those things is array manipulation, or basically doing things to an array that creates some kind of transformation.
+Write a function that returns the string representation of all numbers from 1 to n based on the following rules:
 
-## Prompt
-Can you write a function that takes two arrays as inputs and returns to us their intersection? We can call the method intersection. Let's return the intersection of the two inputs in the form of an array. As a reminder, the definition of an intersection of two sets A and B is the set containing all elements of A that also belong to B (or equivalently, all elements of B that also belong to A).
+If it's a multiple of 3, represent it as "fizz".
+
+If it's a multiple of 5, represent it as "buzz".
+
+If it's a multiple of both 3 and 5, represent it as "fizzbuzz".
+
+If it's neither, just return the number itself.
+
+As such, calling fizzBuzz(15) would result in '12fizz4buzzfizz78fizzbuzz11fizz1314fizzbuzz'.
+
+The following image provides a visual of how we processed the input:
 
 
-Note that all elements in the final result should be unique. Here's one example:
-
-```js
-const nums1 = [1, 2, 2, 1];
-const nums2 = [2, 2];
-
-intersection(nums1, nums2);
-// [2]
-
-
-const nums1 = [4,9,5];
-const nums2 = [9,4,9,8,4];
-
-intersection(nums1, nums2);
-// [9, 4]
-```
 ## Constraints
-- Length of the array <= 100000
-- The values in the array will be in the range -1000000000 and 1000000000
-- Expected time complexity: O(n+m) where n and m are the lengths of the array.
-- Expected space complexity: O(max(n,m)).
+- Maximum value of Integer n <= 1000
+- n will always be a positive integer, but can be 0
+- Expected time complexity : O(n)
+- Expected space complexity : O(1)

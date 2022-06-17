@@ -1,33 +1,20 @@
-var assert = require('assert');
-const reverseOnlyAlphabetical = require('./index')
+const assert = require('assert')
+const isAnagram = require('./index')
 
+describe('isAnagram', function (){
 
-describe("Reverse ony alphabet", () => {
-
-    it('should be a function', function () {
-        assertIsFunction(
-            reverseOnlyAlphabetical,
-            'reverseOnlyAlphabetical is a function');
+    it('should return true for an anagram', function () {
+            assert.equal(isAnagram(
+                'Mary', 'Army'
+            ), true)
     });
 
-    it('should reverse alphabets only 1', function () {
-        assert.equal(
-            reverseOnlyAlphabetical('sea!$hells3'),
-            'sll!$ehaes3',
-            "reverseOnlyAlphabetical('sea!$hells3') should equal 'sll!$ehaes3'");
+    it('should return true for an anagram', function () {
+        assert.equal(isAnagram('cinema', 'iceman'), true);
+    })
+
+    it('should return false for not an anagram', function () {
+        assert.equal(isAnagram('jake', 'jay'), false);
     });
 
-    it('should reverse alphabets only 2', function () {
-        assert.equal(
-            reverseOnlyAlphabetical('1kas90jda3'),
-            '1adj90sak3',
-            "reverseOnlyAlphabetical('1kas90jda3') should return '1adj90sak3'"
-        )
-        ;
-    });
-});
-
-function assertIsFunction(f) {
-    return typeof f === 'function';
-}
-
+})

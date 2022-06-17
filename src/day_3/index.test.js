@@ -1,19 +1,33 @@
 var assert = require('assert');
-const fizzBuzz = require('./index')
+const reverseOnlyAlphabetical = require('./index')
 
 
-describe("Fizzbuzz", function (){
+describe("Reverse ony alphabet", () => {
 
-    it('should return an empty string', function () {
-        assert.equal(fizzBuzz(0), '');
+    it('should be a function', function () {
+        assertIsFunction(
+            reverseOnlyAlphabetical,
+            'reverseOnlyAlphabetical is a function');
     });
 
-    it('should return till 7', function () {
-        assert.equal(fizzBuzz(7), '12fizz4buzzfizz7');
+    it('should reverse alphabets only 1', function () {
+        assert.equal(
+            reverseOnlyAlphabetical('sea!$hells3'),
+            'sll!$ehaes3',
+            "reverseOnlyAlphabetical('sea!$hells3') should equal 'sll!$ehaes3'");
     });
 
-    it('should return till 15', function () {
-        assert.equal(fizzBuzz(15), '12fizz4buzzfizz78fizzbuzz11fizz1314fizzbuzz');
+    it('should reverse alphabets only 2', function () {
+        assert.equal(
+            reverseOnlyAlphabetical('1kas90jda3'),
+            '1adj90sak3',
+            "reverseOnlyAlphabetical('1kas90jda3') should return '1adj90sak3'"
+        )
+        ;
     });
+});
 
-})
+function assertIsFunction(f) {
+    return typeof f === 'function';
+}
+

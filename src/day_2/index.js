@@ -1,15 +1,16 @@
-function intersection(nums1, nums2){
-    let result = []
-    const nums = nums1.reduce((prev, curr) => {
-        return {
-            ...prev,
-            [curr] : true
-        }
-    }, {})
-    for(let i =0; i< nums2.length; i++){
-        if(nums2[i] in nums) result.push(nums2[i])
+function fizzBuzz(n) {
+    let str = '';
+    for (let i = 1; i <= n; i++) {
+        if (i % 3 === 0 && i % 5 === 0)
+            str += 'fizzbuzz';
+        else if (i % 3 === 0)
+            str += 'fizz';
+        else if (i % 5 === 0)
+            str += 'buzz';
+        else
+            str += i;
     }
-    return result
+    return str;
 }
 
-module.exports = intersection
+module.exports = fizzBuzz
