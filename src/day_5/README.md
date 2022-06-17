@@ -6,8 +6,8 @@ Here's the definition of an anagram: a word, phrase, or name formed by rearrangi
 We are given two strings like "cinema" and "iceman" as inputs. Can you write a method isAnagram(str1, str2) that will return true or false depending on whether the strings are anagrams of each other?
 
 ## Constraints
-Length of both the strings <= 100000
-The strings will contain only alphanumeric characters (a-z , A-Z, 0-9)
-The strings can be empty
-Expected time complexity : O(nlogn)
-Expected space complexity : O(n)
+- Length of both the strings <= 100000
+- The strings will contain only alphanumeric characters (a-z , A-Z, 0-9)
+- The strings can be empty
+- Expected time complexity : O(nlogn)
+- Expected space complexity : O(n)

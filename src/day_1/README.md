@@ -24,5 +24,5 @@ reverseString("reverseastring") should return "gnirtsaesrever".
 
 
 ## Constraints
-Do not use the built-in #reverse() method or [::-1] if Python
-Ideal solution would run in O(n) time complexity and O(1) space complexity
+- Do not use the built-in #reverse() method or [::-1] if Python
+- Ideal solution would run in O(n) time complexity and O(1) space complexity

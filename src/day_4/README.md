@@ -14,7 +14,7 @@ reverseOnlyAlphabetical('sea!$hells3');
 ```
 
 ## Constraints
-Length of the given string <= 100000
-The string comprises of ASCII characters
-Expected time complexity : O(n)
-Expected space complexity : O(n)
+- Length of the given string <= 100000
+- The string comprises of ASCII characters
+- Expected time complexity : O(n)
+- Expected space complexity : O(n)

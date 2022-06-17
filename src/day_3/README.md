@@ -21,8 +21,7 @@ The following image provides a visual of how we processed the input:
 
 
 ## Constraints
-Maximum value of Integer n <= 1000
-n will always be a positive integer, but can be 0
-Expected time complexity : O(n)
-Expected space complexity : O(1)
-AlgoDaily partner CodeTips.co.uk has kindly provided a guide on solving Fizz Buzz in Go and Javascript. Check it out for even deeper coverage of this problem.
+- Maximum value of Integer n <= 1000
+- n will always be a positive integer, but can be 0
+- Expected time complexity : O(n)
+- Expected space complexity : O(1)

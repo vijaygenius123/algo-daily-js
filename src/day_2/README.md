@@ -28,7 +28,7 @@ intersection(nums1, nums2);
 // [9, 4]
 ```
 ## Constraints
-Length of the array <= 100000
-The values in the array will be in the range -1000000000 and 1000000000
-Expected time complexity: O(n+m) where n and m are the lengths of the array.
-Expected space complexity: O(max(n,m)).
+- Length of the array <= 100000
+- The values in the array will be in the range -1000000000 and 1000000000
+- Expected time complexity: O(n+m) where n and m are the lengths of the array.
+- Expected space complexity: O(max(n,m)).
