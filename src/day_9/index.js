@@ -1,22 +1,7 @@
 class Hashmap {
+
     constructor() {
-        this.keys = []
-        this.values = []
-    }
-
-    set(key, val) {
-        const hashKey = this.hashStr(key)
-            this.keys.push(hashKey)
-            this.values.push(val)
-        }
-
-    get(key) {
-        const hashKey = this.hashStr(key),
-            index = this.keys.indexOf(hashKey)
-        if (index >= 0) {
-            return this.values[index]
-        } else
-            return undefined
+        this._storage = [];
     }
 
     hashStr(str) {
@@ -27,6 +12,28 @@ class Hashmap {
         }
         return finalHash;
     }
+
+    set(key, val) {
+        let idx = this.hashStr(key);
+
+        if (!this._storage[idx]) {
+            this._storage[idx] = []
+        }
+        this._storage[idx].push([key, val]);
+    }
+
+    get(key) {
+        let idx = this.hashStr(key);
+        if (!this._storage[idx]) {
+            return undefined
+        }
+        for (let keyVal of this._storage[idx]) {
+            if (keyVal[0] === key) {
+                return keyVal[1];
+            }
+        }
+    }
+
 }
 
 module.exports = Hashmap;
