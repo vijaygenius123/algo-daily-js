@@ -8,7 +8,7 @@ describe("Union of Linked List", function (){
             arr2 = [],
             linkedList1 = createFromArray(arr1),
             linkedList2 = createFromArray(arr2)
-        expect(getUnion(linkedList1, linkedList2)).to.eql([])
+        expect(getUnion(linkedList1, linkedList2).toArray()).to.eql([])
     });
 
     it('should return the union of two linked lists 1', function () {
@@ -17,7 +17,7 @@ describe("Union of Linked List", function (){
             result = [5, 7, 9, 13, 14, 15, 25]
         let linkedList1 = createFromArray(arr1),
             linkedList2 = createFromArray(arr2)
-        expect(getUnion(linkedList1, linkedList2)).to.have.members(result)
+        expect(getUnion(linkedList1, linkedList2).toArray()).to.have.members(result)
     });
 
     it('should return the union of two linked lists 2', function () {
@@ -26,6 +26,6 @@ describe("Union of Linked List", function (){
             result = [1]
         let linkedList1 = createFromArray(arr1),
             linkedList2 = createFromArray(arr2)
-        expect(getUnion(linkedList1, linkedList2)).to.have.members(result)
+        expect(getUnion(linkedList1, linkedList2).toArray()).to.have.members(result)
     });
 })

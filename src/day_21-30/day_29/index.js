@@ -67,8 +67,20 @@ function createFromArray(arr){
 
 function getUnion(list1, list2) {
     // implement a method to get the union
-    const result = new Set([... list1.toArray(), ...list2.toArray()]);
-    return Array.from(result);
+    const linkedList = new LinkedList();
+    let list1Current = list1.head || null,
+        list2Current = list2.head || null;
+    while(list1Current){
+        if(!linkedList.isPresent(list1Current.val))
+        linkedList.append(list1Current.val);
+        list1Current = list1Current.next;
+    }
+    while(list2Current){
+        if(!linkedList.isPresent(list2Current.val))
+            linkedList.append(list2Current.val);
+            list2Current = list2Current.next;
+    }
+    return linkedList;
 }
 
 module.exports = {
