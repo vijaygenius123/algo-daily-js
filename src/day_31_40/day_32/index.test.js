@@ -3,6 +3,11 @@ const fibonacci = require('./index')
 
 describe("Fibonacci Sequence", function (){
 
+    it('should throw error for negative number', function (done) {
+        done()
+        expect(() => fibonacci(-1)).to.throw(RangeError)
+    });
+
     it('should return 1 ', function () {
         expect(fibonacci(1)).to.eql(1)
     });
