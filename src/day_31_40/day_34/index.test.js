@@ -1,7 +1,7 @@
 const {expect} = require('chai')
 const {bottomLeftNodeVal, Node} = require('./index')
 
-describe.only("", function (){
+describe("", function (){
 
     it('should return 1', function () {
         var tree = new Node(4);
