@@ -1,7 +1,7 @@
 const {expect} = require('chai')
 const maxProductOfThree = require('./index')
 
-describe.only("Max product of three numbers", function (){
+describe("Max product of three numbers", function (){
 
     it('should be an function', function () {
         expect(maxProductOfThree).to.be.instanceof(Function)
